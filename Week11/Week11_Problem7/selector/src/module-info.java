@@ -1,0 +1,3 @@
+module selector {
+    exports selector;
+}
