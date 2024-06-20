@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vue.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="mnuAdmin" mnemonicParsing="false" onAction="#mnuAdminOnAction" text="Admin">
+            <items>
+              <MenuItem fx:id="mniLoad" mnemonicParsing="false" onAction="#mniLoadOnAction" text="Load" />
+                  <MenuItem fx:id="mniSaveAs" mnemonicParsing="false" onAction="#mniSaveAsOnAction" text="Save as" />
+                  <MenuItem fx:id="mniQuit" mnemonicParsing="false" onAction="#mniQuitOnAction" text="Quit" />
+            </items>
+          </Menu>
+            <Menu fx:id="mnuManage" mnemonicParsing="false" onAction="#mnuManageOnAction" text="Manage">
+              <items>
+                <MenuItem fx:id="mniSortData" mnemonicParsing="false" onAction="#mniSortDataOnAction" text="Sort data" />
+                  <MenuItem fx:id="mniComputeAverage" mnemonicParsing="false" onAction="#mniComputeAverageOnAction" text="Compute average" />
+                  <MenuItem fx:id="mniGroupData" mnemonicParsing="false" onAction="#mniGroupDataOnAction" text="Group data" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="txaResult" prefHeight="374.0" prefWidth="687.0" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
